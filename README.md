@@ -16,4 +16,9 @@ Used Angular Material package and ChartJS.
 
 ![Home Page](img/home.PNG?raw=true "Home")
 
+![Add Expenses](img/add_Expenses.PNG?raw=true "Add Expenses")
+
+![Home Page](img/settings.PNG?raw=true "Settings")
+
+
 
