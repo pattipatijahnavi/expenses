@@ -1,0 +1,17 @@
+<div class="content">
+    <div>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Enter Total Budget" type="number" [(ngModel)]="amount">
+        </mat-form-field>
+        &nbsp;&nbsp;
+        <button mat-stroked-button color="primary" (click)="updateBudget()">Update Budget</button>
+    </div>
+    <br>
+    <div>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Enter Categary Name" type="text" [(ngModel)]="catName">
+        </mat-form-field>
+        &nbsp;&nbsp;
+        <button mat-stroked-button color="primary" (click)="addCategary()">Add Categary</button>
+    </div>
+</div>

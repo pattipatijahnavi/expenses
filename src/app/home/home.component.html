@@ -1,0 +1,52 @@
+<div class="content">
+    <div class="chart-content">
+        <mat-card class="chart-card" *ngIf="showChart">
+            <mat-list-item>Burget Overview : {{totalBurget}}</mat-list-item>
+            <mat-divider></mat-divider>
+            <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="chartType"></canvas>
+        </mat-card>
+        <mat-card class="chart-card" *ngIf="showChart">
+            <mat-list-item>Expenses Overview : {{expensesAmouont}}</mat-list-item>
+            <mat-divider></mat-divider>
+            <canvas baseChart [data]="expChartData" [labels]="expChartLabels" [chartType]="chartType"></canvas>
+        </mat-card>
+
+    </div>
+    <div>
+        <button (click)="onAddExpenses()" mat-stroked-button color="primary">Add Expenses</button>
+    </div>
+    <div>
+        <div class="mat-elevation-z8">
+            <table mat-table [dataSource]="dataSource">
+
+                <!-- Position Column -->
+                <ng-container matColumnDef="category">
+                    <th mat-header-cell *matHeaderCellDef> Category </th>
+                    <td mat-cell *matCellDef="let element"> {{element.category}} </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="itemName">
+                    <th mat-header-cell *matHeaderCellDef> Item Name </th>
+                    <td mat-cell *matCellDef="let element"> {{element.itemName}} </td>
+                </ng-container>
+
+                <!-- Weight Column -->
+                <ng-container matColumnDef="price">
+                    <th mat-header-cell *matHeaderCellDef> Price </th>
+                    <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+                </ng-container>
+
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="date">
+                    <th mat-header-cell *matHeaderCellDef>Date </th>
+                    <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+            <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+        </div>
+    </div>
+</div>

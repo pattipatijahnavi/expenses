@@ -1,0 +1,24 @@
+nav {
+    background: #2D2E2E;
+    height: 100%;
+    padding-top: 20px;
+    width: 140px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    display: block;
+}
+
+a:hover {
+    color: blue;
+}

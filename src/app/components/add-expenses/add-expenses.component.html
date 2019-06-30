@@ -1,0 +1,27 @@
+<div class="content">
+    <h2 mat-dialog-title>{{modalTitle}}</h2>
+    <mat-dialog-content>Please add Expenses</mat-dialog-content>
+    <mat-dialog-actions>
+        <mat-form-field>
+            <mat-label>Category</mat-label>
+            <mat-select [(value)]="selectedCategory">
+                <mat-option *ngFor="let category of categoryData" [value]="category.categoryType">
+                    {{category.category}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Item Names" type="text" [(ngModel)]="enteredItemName">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Price" type="number" [(ngModel)]="expensesPrice">
+        </mat-form-field>
+        <div>
+
+            <button mat-button (click)='addExpenses()'>Add</button>
+            <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog.-->
+            <button mat-button [mat-dialog-close]="true">Cancel</button>
+        </div>
+    </mat-dialog-actions>
+
+</div>
