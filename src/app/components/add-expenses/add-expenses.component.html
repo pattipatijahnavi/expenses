@@ -17,11 +17,8 @@
             <input matInput placeholder="Price" type="number" [(ngModel)]="expensesPrice">
         </mat-form-field>
         <div>
-
             <button mat-button (click)='addExpenses()'>Add</button>
-            <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog.-->
             <button mat-button [mat-dialog-close]="true">Cancel</button>
         </div>
     </mat-dialog-actions>
-
 </div>
